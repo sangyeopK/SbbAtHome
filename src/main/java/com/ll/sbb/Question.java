@@ -17,6 +17,7 @@ public class Question {
     @Column(length = 100)
     private String title;
    // @Column(text값 넣은건데 어노테이션 명을 모르겠어유)
+    @Column(columnDefinition = "TEXT")
     private String content;
     private LocalDateTime createDate;
     //answerList는 하나의 질문에 여러개가 달리는 OnetoMany이기 때문에 배열로 받아주는게 좋을듯하다
