@@ -25,9 +25,12 @@ public class QuestionController {
     }
 
     @GetMapping(value = "/question/detail/{id}")
+    // value값을 갖는 것들은 중괄호를 통해서 value를 집어 넣어야 함
     public String detail(Model model, @PathVariable("id") Integer id) {
+        // pathvariable 어노테이션을 통해서 위의 값에 넣어줄 데이터를 선택해
         Question question = this.questionService.getQuestion(id);
         model.addAttribute("question", question);
+        // question_detail에서 찾아 쓸 question이라는 것.
         return "question_detail";
     }
 }

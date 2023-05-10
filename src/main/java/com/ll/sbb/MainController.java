@@ -12,7 +12,7 @@ public class MainController {
 
     @GetMapping("/")
     public String root(){
-        return "redirect:/question_list";
+        return "redirect:/question/list";
         // redirect사용하면 바로 mapping한 주소로 가고 그에 맞는 템플릿 보여줌
     }
 }

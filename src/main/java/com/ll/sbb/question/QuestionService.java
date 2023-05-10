@@ -17,6 +17,7 @@ public class QuestionService {
 
     public Question getQuestion(Integer id) {
         Optional<Question> question = this.questionRepository.findById(id);
+        // question의 id로 찾는 question.
         if(question.isPresent()){
             return question.get();
         } else {
