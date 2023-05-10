@@ -1,5 +1,6 @@
-package com.ll.sbb;
+package com.ll.sbb.answer;
 
+import com.ll.sbb.answer.Answer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 //Jpa레포지토리를 상속받아서 JPA로서의 역할을 부여했다

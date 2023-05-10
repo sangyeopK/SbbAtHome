@@ -1,5 +1,8 @@
 package com.ll.sbb;
 
+import com.ll.sbb.answer.AnswerRepository;
+import com.ll.sbb.question.Question;
+import com.ll.sbb.question.QuestionRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,15 +24,8 @@ class SbbApplicationTests {
 		q1.setContent("내용2");
 		q1.setCreateDate(LocalDateTime.now());
 		//데이터를 다 넣었다 그런데 저장을 하려면 어디에 해야할까
-		// Jpa를 상속받은 repository에 save메소드가 있는 것 같애유
+		// Jpa를 상속받은 repository에는 save, findAll, delete 등 다양한 메소드가 있다
 		questionRepository.save(q1);
-		// ===========질문1 저장 끝===========
 
-		Answer a1 = new Answer();
-		a1.setContent("1번댓글");
-		a1.setQuestion(q1);
-		a1.setCreateDate(LocalDateTime.now());
-		answerRepository.save(a1);
 	}
-
 }

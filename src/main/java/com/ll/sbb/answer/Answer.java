@@ -1,5 +1,6 @@
-package com.ll.sbb;
+package com.ll.sbb.answer;
 
+import com.ll.sbb.question.Question;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
