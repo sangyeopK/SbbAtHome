@@ -1,11 +1,14 @@
-<table xmlns:th="http://www.w3.org/1999/xhtml">
-    <thead>
-    <tr>
-        <th>제목</th>
-        <th>생성일자</th>
-    </tr>
-    </thead>
-    <tbody>
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>제목</th>
+            <th>생성일자</th>
+        </tr>
+        </thead>
+        <tbody>
         <tr th:each="question : ${questionList}">
             <td>
                 <a th:href="@{|/question/detail/${question.id}|}" th:text="${question.title}">
@@ -13,8 +16,11 @@
             </td>
             <td th:text="${question.createDate}"></td>
         </tr>
-    </tbody>
-</table>
+        </tbody>
+    </table>
+    <a th:href="@{/question/create}">질문 등록하기</a>
+</div>
+</html>
 
 <!--타임리프에 대해서 타임리프는 기본적으로 build.gradle의 depandence에 추가를 해줘야한다 몇가지-->
 <!--그리고 사용법은 model과 addattribute를 통해서 html로 보여질 수 있다-->
